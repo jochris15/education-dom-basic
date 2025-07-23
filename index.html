@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Demo</title>
+
+    <!-- Connect to external css file -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Connect to external JavaScript file -->
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h1>DOM Demo - Interactive Examples</h1>
+
+    <!-- DOM Document Demo -->
+    <div class="container demo-section">
+        <h2>1. DOM Document Methods</h2>
+        <div id="targetElement">Element dengan ID 'targetElement'</div>
+        <div class="testClass">Element dengan class 'testClass'</div>
+        <p>Paragraph element</p>
+        <button onclick="demonstrateDocumentMethods()">Test Document Methods</button>
+        <div id="documentResults"></div>
+    </div>
+
+    <!-- DOM HTML Demo -->
+    <div class="container demo-section">
+        <h2>2. DOM HTML Manipulation</h2>
+        <div id="htmlContainer">
+            <h3 class="title">Original Title</h3>
+            <p>Original paragraph content</p>
+        </div>
+        <button onclick="changeContent()">Change Content</button>
+        <button onclick="addNewElement()">Add New Element</button>
+        <button onclick="removeElement()">Remove Last Element</button>
+    </div>
+
+    <!-- DOM CSS Demo -->
+    <div class="container demo-section">
+        <h2>3. DOM CSS Manipulation</h2>
+        <div id="cssTarget">Element untuk styling</div>
+        <button onclick="changeStyles()">Change Styles</button>
+        <button onclick="toggleClass()">Toggle 'highlight' Class</button>
+        <button onclick="addActiveClass()">Toggle 'active' Class</button>
+        <button onclick="resetStyles()">Reset Styles</button>
+    </div>
+
+    <!-- DOM Event Listeners Demo -->
+    <div class="container demo-section">
+        <h2>4. DOM Event Listeners</h2>
+        <button id="clickButton">Click Me!</button>
+        <input type="text" id="textInput" placeholder="Type something here...">
+        <form id="demoForm">
+            <input type="text" id="formInput" placeholder="Enter your name" required>
+            <button type="submit">Submit Form</button>
+        </form>
+        <div id="eventResults"></div>
+    </div>
+
+    <!-- DOM Alert & Prompt Demo -->
+    <div class="container demo-section">
+        <h2>5. DOM Alert & Prompt</h2>
+        <button onclick="showAlert()">Show Alert</button>
+        <button onclick="showConfirm()">Show Confirm</button>
+        <button onclick="showPrompt()">Show Prompt</button>
+        <div id="dialogResults"></div>
+    </div>
+</body>
+
+</html>
