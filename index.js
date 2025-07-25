@@ -15,6 +15,10 @@ function demonstrateDocumentMethods() {
     const byQuerySelector = document.querySelector('#targetElement');
     const byQuerySelectorAll = document.querySelectorAll('.testClass');
 
+    // Console.log exists at terminal browser
+    console.log(byQuerySelector);
+
+    // Hanya untuk kepentingan demo
     results.innerHTML = `
         <h4>Results:</h4>
         <p>getElementById: ${byId ? byId.textContent : 'Not found'}</p>
@@ -28,7 +32,6 @@ function demonstrateDocumentMethods() {
 // 2. DOM HTML Manipulation Demo
 function changeContent() {
     const container = document.getElementById('htmlContainer');
-    const title = container.querySelector('.title');
 
     // Change innerHTML
     container.innerHTML = `
@@ -42,6 +45,8 @@ function addNewElement() {
     const container = document.getElementById('htmlContainer');
     const newParagraph = document.createElement('p');
     newParagraph.textContent = `New paragraph added at ${new Date().toLocaleTimeString()}`;
+
+    // Added CSS Method
     newParagraph.style.backgroundColor = '#e7f3ff';
     newParagraph.style.padding = '5px';
     container.appendChild(newParagraph);
@@ -91,23 +96,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const eventResults = document.getElementById('eventResults');
 
     // Click event
-    clickButton.addEventListener('click', function (event) {
+    function handleClick(event) {
         eventResults.innerHTML += `<p>Button clicked at ${new Date().toLocaleTimeString()}</p>`;
         console.log('Button clicked!', event);
-    });
+    }
+
+    clickButton.addEventListener('click', handleClick);
 
     // Input event
-    textInput.addEventListener('input', function (event) {
+    function handleInput(event) {
         eventResults.innerHTML = `<p>Input value: "${event.target.value}"</p>`;
-    });
+    }
+
+    textInput.addEventListener('input', handleInput);
 
     // Form submit event
-    form.addEventListener('submit', function (event) {
+    function handleSubmit(event) {
         event.preventDefault();
         const formInput = document.getElementById('formInput');
         eventResults.innerHTML += `<p>Form submitted with value: "${formInput.value}"</p>`;
         formInput.value = ''; // Clear input
-    });
+    }
+
+    form.addEventListener('submit', handleSubmit);
 });
 
 // 5. DOM Alert & Prompt Demo
